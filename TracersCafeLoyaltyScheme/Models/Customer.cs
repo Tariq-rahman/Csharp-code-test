@@ -15,12 +15,15 @@ namespace TracersCafeLoyaltyScheme.Models
         public Title Title { get; set; }
         public String Firstname { get; set; }
         public String Lastname { get; set; }
-        public String[] Adress;
+        public String Adress1 { get; set; }
+        public String Adress2 { get; set; }
+        public String Adress3 { get; set; }
+        public String Adress4 { get; set; }
         public String Postcode { get; set; }
         public String Telephone { get; set; }
         public int Age { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public DateTime ModifiedDate { get; set; }
+        //public DateTime CreatedDate { get; set; }
+        //public DateTime ModifiedDate { get; set; }
     }
 }
     

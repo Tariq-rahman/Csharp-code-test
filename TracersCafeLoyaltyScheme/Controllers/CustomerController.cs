@@ -56,13 +56,17 @@ namespace TracersCafeLoyaltyScheme.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,Title,Firstname,Lastname,Adress1,Adress2,Adress3,Adress4,Postcode,Telephone,Age")] Customer customer)
         {
+            String successMessage = "";
             if (ModelState.IsValid)
             {
+                successMessage = "Customer " + customer.Firstname + "created sucessfully";
                 _context.Add(customer);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+            } else {
+                View(customer);
             }
-            return View(customer);
+            return Content(successMessage);
         }
 
         // GET: Customer/Edit/5

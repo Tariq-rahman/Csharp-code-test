@@ -27,6 +27,7 @@ namespace TracersCafeLoyaltyScheme.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please enter the Postcode")]
         public String Postcode { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please enter a Telephone number")]
+        [StringLength(maximumLength: 11, MinimumLength = 11, ErrorMessage = "Please enter valid UK number")]
         public String Telephone { get; set; }
         public int Age { get; set; }
         //public DateTime CreatedDate { get; set; }

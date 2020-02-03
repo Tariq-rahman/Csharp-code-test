@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TracersCafeLoyaltyScheme.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,13 +13,15 @@ namespace TracersCafeLoyaltyScheme.Migrations
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<int>(nullable: false),
-                    Firstname = table.Column<string>(nullable: true),
-                    Lastname = table.Column<string>(nullable: true),
-                    Postcode = table.Column<string>(nullable: true),
-                    Telephone = table.Column<string>(nullable: true),
-                    Age = table.Column<int>(nullable: false),
-                    CreatedDate = table.Column<DateTime>(nullable: false),
-                    ModifiedDate = table.Column<DateTime>(nullable: false)
+                    Firstname = table.Column<string>(nullable: false),
+                    Lastname = table.Column<string>(nullable: false),
+                    Adress1 = table.Column<string>(nullable: false),
+                    Adress2 = table.Column<string>(nullable: true),
+                    Adress3 = table.Column<string>(nullable: true),
+                    Adress4 = table.Column<string>(nullable: true),
+                    Postcode = table.Column<string>(nullable: false),
+                    Telephone = table.Column<string>(nullable: false),
+                    Age = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

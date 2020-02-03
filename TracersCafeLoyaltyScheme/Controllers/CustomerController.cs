@@ -95,8 +95,7 @@ namespace TracersCafeLoyaltyScheme.Controllers
             if (id != customer.ID)
             {
                 return NotFound();
-            }
-
+            }               
             if (ModelState.IsValid)
             {
                 try
@@ -116,8 +115,10 @@ namespace TracersCafeLoyaltyScheme.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
+            } else
+            {
+                return View(customer);
             }
-            return View(customer);
         }
 
         // GET: Customer/Delete/5

@@ -20,9 +20,17 @@ namespace TracersCafeLoyaltyScheme.Controllers
         }
 
         // GET: Customer
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(String searchString)
         {
-            return View(await _context.Customer.ToListAsync());
+            var customers = from c in _context.Customer
+                         select c;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                customers= customers.Where(s => s.Firstname.Contains(searchString));
+            }
+
+            return View(await customers.ToListAsync());           
         }
 
         // GET: Customer/Details/5

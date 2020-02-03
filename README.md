@@ -20,3 +20,9 @@ Project user story scenario and requirements can be found in `CandidateTest_2019
 ## How to use
 - Clone repo and open as existing project in visual studio
 - Press CTRL+F5 to start up the web server
+
+## Improvements 
+- improve the aesthetics of the user interface
+- add `CreatedAt` and `ModifiedAt` fields for Customer model
+- improve the client side validation for Post code and telephone
+- improve the filtering system to be able to filter by more elements such as lastname
